@@ -1,1 +1,3 @@
-MacOS calculator with React
+## MacOS calculator with React
+
+![](public/images/image.png)
