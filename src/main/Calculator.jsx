@@ -29,6 +29,7 @@ export default class Calculator extends Component {
   }
 
   setOperation(operation) {
+    console.log(operation)
     if (this.state.current === 0) {
       this.setState({ operation, current: 1, clearDisplay: true })
     } else {
@@ -66,12 +67,11 @@ export default class Calculator extends Component {
     this.setState({ displayValue, clearDisplay: false })
 
     if (n !== '.') {
-      const i = this.state.current
+      const current = this.state.current
       const newValue = parseFloat(displayValue)
       const values = [...this.state.values]
-      values[i] = newValue
+      values[current] = newValue
       this.setState({values})
-      console.log(values)
     }
   }
 
